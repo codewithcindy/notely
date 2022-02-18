@@ -21,6 +21,7 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const dbUrl = process.env.DB_URL || "mongodb://localhost:27017/notelyDB";
 const secret = process.env.SECRET;
+const port = process.env.PORT || 3000;
 
 // Mongoose
 mongoose
@@ -126,7 +127,6 @@ app.use((err, req, res, next) => {
   res.status(status).render("partials/error", { err });
 });
 
-const port = 3000;
 app.listen(port, () => {
   console.log(`Serving app on port ${port}`);
 });
