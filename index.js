@@ -19,12 +19,8 @@ const flash = require("connect-flash");
 const ejsMate = require("ejs-mate");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
-// const dbUrl = process.env.DB_URL || "mongodb://localhost:27017/notelyDB";
-const secret = process.env.SECRET;
-// const port = process.env.PORT || 3000;
-const dbUrl = "mongodb://localhost:27017/notelyDB";
-
-const port = 3000;
+const dbUrl = process.env.DB_URL || "mongodb://localhost:27017/notelyDB";
+const port = process.env.PORT || 3000;
 
 // Mongoose
 mongoose
