@@ -1,0 +1,16 @@
+<%- layout("layouts/home/boilerplate") %>
+
+<form
+  class="profile-image__form"
+  action="/home/profile"
+  method="POST"
+  enctype="multipart/form-data"
+>
+  <h2>Change profile picture</h2>
+
+  <div class="profile-image__field">
+    <label class="image-label" for="profile-image"></label>
+    <input type="file" id="profile-image" name="profile-image" />
+  </div>
+  <button type="submit" class="profile-image__submit-btn">Submit change</button>
+</form>

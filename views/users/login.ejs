@@ -1,0 +1,41 @@
+<%- layout("layouts/welcome/boilerplate") %>
+
+<div id="login__container">
+  <h1 id="login__title">Log In</h1>
+  <form id="login__form" action="/login" method="POST">
+    <div class="login__field">
+      <label for="username"></label>
+
+      <% if (user) { %>
+      <input
+        type="username"
+        id="username"
+        name="username"
+        placeholder="Username!"
+        autofocus
+        value="<%= user %>"
+      />
+      <% } else { %>
+      <input
+        type="username"
+        id="username"
+        name="username"
+        placeholder="Username!"
+        autofocus
+      />
+      <% } %>
+    </div>
+    <div class="login__field">
+      <label for="password"></label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Password pls :)"
+      />
+    </div>
+    <button id="login__submit-btn" type="submit">Log In</button>
+  </form>
+
+  <%- include("../partials/flash")%>
+</div>

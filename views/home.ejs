@@ -1,0 +1,62 @@
+<%- layout("layouts/home/boilerplate") %>
+
+<div class="home-container">
+  <div class="todo">
+    <h2 class="todo-column__header column-header">Daily</h2>
+    <form action="/todo/new" method="POST">
+      <div class="todo-form">
+        <label for="todo"></label>
+        <input
+          class="todo-form__input"
+          type="text"
+          id="todo"
+          name="todoText"
+          placeholder="Add new todo"
+        />
+        <button type="submit" class="new-todo-btn">+</button>
+      </div>
+    </form>
+    <ul class="todo-list">
+      <% for (let item of currentUser.todos) { %>
+      <li class="todo-list__item">
+        <%= item.text %>
+        <form
+          class="todo-list__item__delete"
+          action="todo/<%= item._id %>/?_method=DELETE"
+          method="POST"
+        >
+          <button class="todo-list__item__delete-btn">x</button>
+        </form>
+      </li>
+      <% } %>
+
+      <!-- <li class="todo-list-item">Laundry</li>
+            <li class="todo-list-item">Groceries</li> -->
+    </ul>
+  </div>
+  <div class="life">
+    <h2 class="column-header">Life</h2>
+    <ul class="life-list">
+      <li class="life-list__item">
+        <a class="life-list__item__link" href="/food">Food</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- 
+<script>
+  const listItem = document.querySelector(".life-list-item");
+
+  listItem.addEventListener("mouseover", (e) => {
+    listItem.style.cursor = "pointer";
+  });
+
+  listItem.addEventListener(
+    "click",
+    (e) => {
+      console.log("capturing");
+      window.location.href = "/food";
+    },
+    true
+  );
+</script> -->

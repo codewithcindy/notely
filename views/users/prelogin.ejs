@@ -1,0 +1,22 @@
+<%- layout("layouts/welcome/boilerplate") %>
+
+<div id="prelogin__container">
+  <h1 id="prelogin__title">Log In</h1>
+  <form id="prelogin__form" action="/prelogin" method="POST">
+    <div class="prelogin__field">
+      <label for="username"></label>
+      <input
+        type="username"
+        id="username"
+        name="username"
+        placeholder="Username!"
+        autofocus
+      />
+    </div>
+    <button id="prelogin__submit-btn" type="submit">
+      Continue with username
+    </button>
+  </form>
+
+  <%- include("../partials/flash")%>
+</div>

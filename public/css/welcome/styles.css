@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: #4e4e4e;
+}
+
+header {
+  height: 10vh;
+  padding: 20px;
+  border-bottom: 1px solid rgba(107, 107, 107, 0.3);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo a {
+  text-decoration: none;
+  color: rgb(46, 46, 46);
+}
+
+#nav-list {
+  display: flex;
+
+  list-style: none;
+}
+
+.nav-item {
+  margin: 5px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #6b6b6b;
+}
+
+.nav-link:hover {
+  color: rgb(46, 46, 46);
+}
+
+/* Welcome Page */
+
+#welcome__container {
+  background-image: url("https://studioghiblimovies.com/wp-content/uploads/2020/03/73-737065_living-waters-ag-wave-vector-clipart.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome__title {
+  color: #f5f5f5;
+  font-size: 3rem;
+  text-shadow: 3px 3px 10px #6b6b6b;
+}
+
+#welcome__enter-btn {
+  margin: 2px 0;
+  color: #f5f5f5;
+  animation: bounce 0.7s infinite linear alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateX(-5px);
+    color: #c6c5c5;
+  }
+  100% {
+    transform: translateX(5px);
+    color: #f5f5f5;
+  }
+}
+
+#welcome__login-btn,
+#welcome__register-btn {
+  text-decoration: none;
+  color: #f5f5f5;
+  text-shadow: 3px 3px 10px #6b6b6b;
+}
+
+#welcome__login-btn:hover,
+#welcome__register-btn:hover {
+  color: #c6c5c5;
+}
+
+#welcome__login-btn::after {
+  content: " /";
+}
+
+/* Log In Page */
+#prelogin__container,
+#login__container,
+#register__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 90vh;
+}
+
+#prelogin__form,
+#login__form,
+#register__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 40vw;
+}
+
+.prelogin__field,
+.login__field,
+.register__field {
+  width: 50%;
+  margin: 0.5rem 0;
+}
+
+.prelogin__field input,
+.login__field input,
+.register__field input {
+  width: 100%;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border: 1px solid #c6c5c5;
+}
+
+.login__field input::placeholder,
+.register__field input::placeholder {
+  color: #c6c5c5;
+}
+
+#prelogin__submit-btn,
+#login__submit-btn,
+#register__submit-btn {
+  width: 50%;
+  margin: 0.5rem 0;
+  background-color: #d8ecdf;
+  color: #81af80;
+  border: none;
+  padding: 10px;
+}
+
+#login__submit-btn:hover,
+#register__submit-btn:hover {
+  color: #527552;
+  cursor: pointer;
+}
+
+/* Flash */
+
+.flash-success {
+  background-color: rgba(129, 175, 128, 0.3);
+  color: #6b6b6b;
+  padding: 3px 5px;
+  margin: 5px 0;
+}
+
+.flash-error {
+  background-color: rgba(240, 172, 172, 0.3);
+  color: #6b6b6b;
+  padding: 3px 5px;
+  margin: 5px 0;
+}

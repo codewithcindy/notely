@@ -1,0 +1,39 @@
+<%- layout("layouts/home/boilerplate") %>
+
+<a class="all-recipes-btn" href="/food"
+  ><i class="fas fa-long-arrow-alt-left"></i> All recipes</a
+>
+
+<div class="details-card">
+  <div class="details-card__left">
+    <!-- <img src="<%= recipe.image %>" alt=""> -->
+    <img
+      class="details-card__left-image"
+      src="<%= recipe.image.url %> "
+      alt=""
+    />
+  </div>
+  <div class="details-card__text">
+    <h3 class="details-card__text-header"><%= recipe.title %></h3>
+    <ul class="details-card__ingredients">
+      <% for (let ingredient of recipe.ingredients) { %>
+      <li class="ingredient"><%= ingredient %></li>
+      <% } %>
+    </ul>
+
+    <div class="details-card__buttons">
+      <form
+        class="edit-btn"
+        action="/food/<%= recipe._id %>/edit/"
+        method="GET"
+      >
+        <button class="details-card__buttons-edit">Edit Recipe</button>
+      </form>
+    </div>
+  </div>
+  <form action="/food/<%= recipe._id %>/?_method=DELETE" method="POST">
+    <button class="details-card__buttons-delete">
+      <i class="far fa-trash-alt"></i> Delete Recipe
+    </button>
+  </form>
+</div>

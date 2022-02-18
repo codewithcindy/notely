@@ -1,0 +1,41 @@
+<%- layout("layouts/home/boilerplate") %>
+
+<div class="food-header">
+  <h2 class="column-header"><a href="/food">Food</a></h2>
+
+  <button class="btn new-recipe-btn">
+    <a class="new-recipe-link" href="/food/new">Add new recipe</a>
+  </button>
+</div>
+
+<div class="cards-container">
+  <% for (let recipe of recipes) { %>
+  <div class="card">
+    <div class="card__head">
+      <img class="card__image" src="<%= recipe.image.url %> " alt="" />
+    </div>
+    <div class="card__body">
+      <h3><a href="/food/<%= recipe._id %> "><%= recipe.title %></a></h3>
+    </div>
+  </div>
+  <% } %>
+
+  <!-- <div class="card">
+            <div class="card-top">
+                <img class="card-img" src="/img/oatmeal.jpg" alt="">
+            </div>
+            <div class="card-body">
+                <h3>Oatmeal</h3>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-top">
+                <img class="card-img" src="/img/oatmeal.jpg" alt="">
+            </div>
+            <div class="card-body">
+                <h3>Oatmeal</h3>
+            </div>
+        </div> -->
+</div>
