@@ -4,20 +4,6 @@ const router = express.Router({ mergeParams: true });
 const User = require("../models/userModel");
 const passport = require("passport");
 
-// const getGreeting = (req, res, next) => {
-//   const currentTime = new Date().getHours();
-//   let greeting;
-//   console.log(currentTime);
-//   if (currentTime > 18 && currentTime < 4) {
-//     greeting = "Good evening ~";
-//   }
-//   if (currentTime > 4 && currentTime < 12) {
-//     greeting = "Good morning ☀️";
-//   } else {
-//     greeting = "Good afternoon bish";
-//   }
-// };
-
 // Home Page
 router.get("/", async (req, res) => {
   // Check if user is already logged in
@@ -70,8 +56,6 @@ router.post(
     failureRedirect: "/login",
   }),
   async (req, res) => {
-    console.log(req.session);
-    // console.log(req.user);
     const user = req.user;
 
     req.flash("success", `welcome back, ${user.username} :)`);
@@ -105,8 +89,6 @@ router.post("/register", async (req, res) => {
     req.login(registeredUser, (err) => {
       if (err) return next(err);
     });
-
-    console.log(req.user);
 
     req.flash("success", "welcome to notely :)");
     res.redirect("/home");
