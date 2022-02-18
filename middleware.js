@@ -11,9 +11,6 @@ module.exports.validateRecipe = (req, res, next) => {
     const msg = result.error.details.map((el) => el.message).join(",");
     // Run error handler
     throw new ExpressError(400, msg);
-    // console.log(result.error);
-    // req.flash("error", result.error);
-    // res.redirect("/food/new");
   }
   // If no error, continue with rest of the router handler
   else {

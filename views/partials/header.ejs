@@ -5,14 +5,14 @@
 <div class="heading">
   <div class="profile heading-item">
     <a href="/home">
-      <% if (!currentUser.profile) { %>
-      <img class="profile__image" src="/img/abstract_floral.jpeg" alt="" />
-      <% } else { %>
+      <% if (currentUser.profile.image.url) { %>
       <img
         class="profile__image"
-        src="<%=currentUser.profile.image.url %>"
+        src="<%= currentUser.profile.image.url %>"
         alt=""
       />
+      <% } else { %>
+      <img class="profile__image" src="/img/abstract_floral.jpeg" alt="" />
       <% } %>
     </a>
     <a class="profile__edit" href="/home/profile">Change profile picture</a>
