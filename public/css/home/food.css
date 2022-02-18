@@ -13,6 +13,16 @@
   width: 100%;
 }
 
+.food-header .column-header a {
+  text-decoration: none;
+  color: #6b6b6b;
+}
+
+.food-header .column-header a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
 .new-recipe-btn {
   padding: 15px;
   width: 80%;
