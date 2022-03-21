@@ -1,6 +1,6 @@
 # Notely
 
-Notely is an app that I created with the inspiration from Notion - “a project managemet and note-taking software”. I frequently use Notion and love its simple, customizable features. I had just completed the Udemy course “The Web Developr Bootcamp 2022” from Colt Steele, and I wanted to practice the skills I’ve learned to create a project that I feel connected to.
+Notely is an app that I created with the inspiration from Notion - “a project managemet and note-taking software”. I frequently use Notion and love its simple, customizable features. I had just completed the Udemy course “The Web Developer Bootcamp 2022” from Colt Steele, and I wanted to practice the skills I’ve learned to create a project that I feel connected to.
 
 ### Features
 
