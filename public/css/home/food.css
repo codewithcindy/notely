@@ -5,6 +5,7 @@
   align-items: center;
 
   width: 30vw;
+  min-width: 300px;
   margin: 0 auto;
 }
 
@@ -70,13 +71,20 @@
 }
 
 /* Food page - New recipe form */
-.recipe-form {
+.recipe-form__container {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
 
-  margin: 0 auto;
-  width: 40vw;
+.recipe-form {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  /* margin: 0 auto; */
+  /* width: 40vw; */
+  width: 700px;
 }
 
 .recipe-form h2 {
@@ -129,13 +137,22 @@
 }
 
 /* Food Page - Show page */
+.details-card__container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .details-card {
   display: flex;
   align-items: center;
 
+  /* width: 50rem;
+  height: 25rem; */
   width: 800px;
   height: 400px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   padding: 2rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 
@@ -197,4 +214,22 @@
 .details-card__buttons-delete:hover {
   cursor: pointer;
   color: #000;
+}
+
+@media only screen and (max-width: 1100px) {
+  .details-card {
+    flex-direction: column;
+    width: 500px;
+    height: auto;
+    padding-top: 3rem;
+  }
+
+  .details-card__left {
+    width: 100%;
+  }
+
+  .details-card__text {
+    width: 100%;
+    /* align-items: baseline; */
+  }
 }

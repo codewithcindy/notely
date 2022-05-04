@@ -1,39 +1,41 @@
 <%- layout("layouts/home/boilerplate") %>
 
-<form
-  class="recipe-form"
-  action="/food/<%= recipe._id %>/?_method=PATCH"
-  method="POST"
-  enctype="multipart/form-data"
->
-  <h2>Edit recipe</h2>
-  <div class="recipe-form__field">
-    <label for="title"></label>
-    <input
-      type="text"
-      id="title"
-      name="title"
-      value="<%= recipe.title %>"
-      required
-    />
-  </div>
-  <div class="recipe-form__field">
-    <label for="ingredients"></label>
-    <input
-      type="text"
-      id="ingredients"
-      name="ingredients"
-      value="<%= recipe.ingredients %>"
-      required
-    />
-  </div>
-  <div class="recipe-form__field">
-    <label class="image-label" for="image"></label>
-    <input type="file" id="image" name="image" />
-  </div>
-  <button type="submit" class="recipe-form__submit">Submit Changes</button>
-</form>
+<div class="recipe-form__container">
+  <form
+    class="recipe-form"
+    action="/food/<%= recipe._id %>/?_method=PATCH"
+    method="POST"
+    enctype="multipart/form-data"
+  >
+    <h2>Edit recipe</h2>
+    <div class="recipe-form__field">
+      <label for="title"></label>
+      <input
+        type="text"
+        id="title"
+        name="title"
+        value="<%= recipe.title %>"
+        required
+      />
+    </div>
+    <div class="recipe-form__field">
+      <label for="ingredients"></label>
+      <input
+        type="text"
+        id="ingredients"
+        name="ingredients"
+        value="<%= recipe.ingredients %>"
+        required
+      />
+    </div>
+    <div class="recipe-form__field">
+      <label class="image-label" for="image"></label>
+      <input type="file" id="image" name="image" />
+    </div>
+    <button type="submit" class="recipe-form__submit">Submit Changes</button>
+  </form>
 
-<a class="all-recipes-btn" href="/food"
-  ><i class="fas fa-long-arrow-alt-left"></i> All recipes</a
->
+  <a class="all-recipes-btn" href="/food"
+    ><i class="fas fa-long-arrow-alt-left"></i> All recipes</a
+  >
+</div>

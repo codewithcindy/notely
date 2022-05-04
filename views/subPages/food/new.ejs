@@ -1,34 +1,36 @@
 <%- layout("layouts/home/boilerplate") %>
 
-<form
-  class="recipe-form"
-  action="/food/new"
-  method="POST"
-  enctype="multipart/form-data"
->
-  <h2>Add new recipe</h2>
-  <div class="recipe-form__field">
-    <label for="title"></label>
-    <input class="type="text" id="title" name="title" placeholder="Title.."
-    required>
-  </div>
-  <div class="recipe-form__field">
-    <label for="ingredients"></label>
-    <input
-      type="text"
-      id="ingredients"
-      name="ingredients"
-      placeholder="Ingredients.."
-      required
-    />
-  </div>
-  <div class="recipe-form__field">
-    <label class="image-label" for="image"></label>
-    <input type="file" id="image" name="image" />
-  </div>
-  <button type-="submit" class="recipe-form__submit">Submit recipe</button>
-</form>
+<div class="recipe-form__container">
+  <form
+    class="recipe-form"
+    action="/food/new"
+    method="POST"
+    enctype="multipart/form-data"
+  >
+    <h2>Add new recipe</h2>
+    <div class="recipe-form__field">
+      <label for="title"></label>
+      <input class="type="text" id="title" name="title" placeholder="Title.."
+      required>
+    </div>
+    <div class="recipe-form__field">
+      <label for="ingredients"></label>
+      <input
+        type="text"
+        id="ingredients"
+        name="ingredients"
+        placeholder="Ingredients.."
+        required
+      />
+    </div>
+    <div class="recipe-form__field">
+      <label class="image-label" for="image"></label>
+      <input type="file" id="image" name="image" />
+    </div>
+    <button type-="submit" class="recipe-form__submit">Submit recipe</button>
+  </form>
 
-<a class="all-recipes-btn" href="/food"
-  ><i class="fas fa-long-arrow-alt-left"></i> All recipes</a
->
+  <a class="all-recipes-btn" href="/food"
+    ><i class="fas fa-long-arrow-alt-left"></i> All recipes</a
+  >
+</div>

@@ -72,13 +72,18 @@ header {
 }
 
 /* Profile */
+.profile-image__form__container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
 .profile-image__form {
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  margin: 0 auto;
-  width: 40vw;
+  min-width: 700px;
 }
 
 .profile-image__field {
@@ -107,4 +112,15 @@ header {
   background-color: #bee4cb;
   color: #527552;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+  .profile {
+    left: 25px;
+  }
+
+  .profile__image {
+    width: 100px;
+    height: 100px;
+  }
 }

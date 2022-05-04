@@ -101,7 +101,6 @@ router.post("/register", async (req, res) => {
 // Log Out
 router.post("/logout", async (req, res) => {
   req.logout();
-  console.log(req.session);
   res.redirect("/login");
 });
 

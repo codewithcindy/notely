@@ -1,14 +1,26 @@
 /* Main - Home Page */
 
+.main {
+  padding: 0 6rem 6rem 6rem;
+
+  /* display: flex;
+  justify-content: center; */
+}
+
 .home-container {
   display: flex;
   justify-content: space-evenly;
 }
 
-.todo,
+.home__section {
+  flex: 0 0 30vw;
+  margin-bottom: 2rem;
+}
+
+/* .todo,
 .life {
   flex: 0 0 30vw;
-}
+} */
 
 .column-header {
   background-color: #eeedbd;
@@ -96,4 +108,10 @@
 
 .life-list__item:hover {
   background-color: #e6e6e6;
+}
+
+@media only screen and (max-width: 800px) {
+  .home-container {
+    display: block;
+  }
 }
