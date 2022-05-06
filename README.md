@@ -39,3 +39,10 @@ Notely is an app that I created with the inspiration from Notion - “a project 
 ### Try It Out
 
 [Notely](https://my-notely.herokuapp.com/)
+
+![welcome](https://user-images.githubusercontent.com/47929016/159211216-10cb304c-6c87-4423-99af-924741f4183f.png)
+![login](https://user-images.githubusercontent.com/47929016/159211255-7796008f-1d76-48a3-bdcc-5b5d1475f49d.png)
+![home](https://user-images.githubusercontent.com/47929016/159211268-17a23601-9bad-4d59-8294-c0661b666e4b.png)
+![food_index](https://user-images.githubusercontent.com/47929016/159211274-71319c56-1fe9-4d8a-8451-d87a7d5a128c.png)
+![recipe_details](https://user-images.githubusercontent.com/47929016/159211278-55670c40-4a84-4f85-8ba7-fccb12015b59.png)
+
