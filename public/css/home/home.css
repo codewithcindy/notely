@@ -110,8 +110,20 @@
   background-color: #e6e6e6;
 }
 
+/* Mobile Responsive */
+
 @media only screen and (max-width: 800px) {
+  .main {
+    padding: 0 5rem 5rem 5rem;
+  }
+
   .home-container {
     display: block;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .main {
+    padding: 0 3rem 3rem 3rem;
   }
 }

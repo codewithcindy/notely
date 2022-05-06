@@ -50,6 +50,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   height: 90vh;
+  padding: 1rem;
 
   display: flex;
   flex-direction: column;
@@ -116,7 +117,7 @@ header {
   align-items: center;
 
   /* width: 40vw; */
-  width: 700px;
+  width: 600px;
 }
 
 .prelogin__field,
@@ -171,4 +172,12 @@ header {
   color: #6b6b6b;
   padding: 3px 5px;
   margin: 5px 0;
+}
+
+/* Mobile Responsive */
+
+@media only screen and (max-width: 800px) {
+  #welcome__title {
+    font-size: 2.5rem;
+  }
 }

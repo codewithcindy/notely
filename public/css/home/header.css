@@ -119,8 +119,33 @@ header {
     left: 25px;
   }
 
+  .profile__edit {
+    font-size: 0.65rem;
+  }
+
   .profile__image {
     width: 100px;
     height: 100px;
+  }
+
+  .greeting,
+  .logout-btn {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .profile__edit {
+    font-size: 0.55rem;
+  }
+
+  .profile__image {
+    width: 75px;
+    height: 75px;
+  }
+
+  .greeting,
+  .logout-btn {
+    font-size: 0.8rem;
   }
 }

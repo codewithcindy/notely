@@ -22,3 +22,10 @@
   padding: 3px 5px;
   margin: 5px 0;
 }
+
+@media only screen and (max-width: 480px) {
+  .flash-success,
+  .flash-error {
+    font-size: 0.8rem;
+  }
+}
