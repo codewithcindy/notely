@@ -71,6 +71,15 @@
   padding: 1rem 0 0.5rem 0;
 }
 
+.card__title a {
+  text-decoration: none;
+  color: #3f3f3f;
+}
+
+.card__title a:hover {
+  color: #6b6b6b;
+}
+
 /* Food page - New recipe form */
 .recipe-form__container {
   display: flex;

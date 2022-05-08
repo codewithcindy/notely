@@ -69,8 +69,6 @@ router.post(
     // Save recipe to database
     await recipeItem.save();
 
-    console.log(recipeItem);
-
     req.flash("success", "new recipe added");
     res.redirect(`/food/${recipeItem._id}`);
   })
@@ -90,8 +88,6 @@ router.get("/:id/edit", isLoggedIn, async (req, res) => {
   const { id } = req.params;
 
   const recipe = await Recipe.findById(id);
-
-  // console.log("old /recipe", recipe);
 
   res.render(`subPages/food/edit`, { recipe });
 });
