@@ -10,7 +10,6 @@ router.post("/new", async (req, res) => {
   const { user } = req.session.passport;
 
   const currentUser = await User.findOne({ username: user });
-  console.log(currentUser);
 
   if (newTodo.todoText) {
     // Create new document

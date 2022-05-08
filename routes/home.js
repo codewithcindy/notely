@@ -34,8 +34,6 @@ router.post(
     // Get current user
     // const currentUser = await User.findOne({ username: user });
 
-    console.log(currentUser);
-
     // Get new profile image
     if (!req.file) {
       req.flash("error", "Please include an image file");
