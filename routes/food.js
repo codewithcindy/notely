@@ -127,7 +127,6 @@ router.patch(
     // Save updated recipe to database
     recipe.save();
 
-    // console.log("updated recipe", recipe);
     // req.flash("success", "recipe successfully updated");
 
     res.redirect(`/food/${id}`);
